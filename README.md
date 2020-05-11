@@ -3,6 +3,9 @@
 ### Features:
 * Downloading images with Caching mechanism
 
+### Working:
+* ___cachedImages___ (declared in the CachingUtil)is used to cache the images downloaded. This is cleared in 2 cases - 1. When the application is ___low on memory___ 2. OnDestroy of the last activity - which in this case is ___ImageLoadingActivity___
+
 ### Add jitpack in your root build.gradle at the end of repositories:
 
 ```
