@@ -17,17 +17,17 @@ object CustomRetrofitProvider {
     fun getRetrofit(baseUrl: String): Retrofit {
         return Retrofit.Builder()
             .baseUrl(baseUrl)
-            .client(getMyHttpClient())
+//            .client(getMyHttpClient())
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
             .build()
     }
 
-    private fun getMyHttpClient(): OkHttpClient {
+    /*private fun getMyHttpClient(): OkHttpClient {
         val builder = OkHttpClient().newBuilder()
 //            .addNetworkInterceptor(CachingInterceptor())
 //            .addNetworkInterceptor(ForceCacheInterceptor())
             .addNetworkInterceptor(LoggerInterceptor())
         return builder.build()
-    }
+    }*/
 }

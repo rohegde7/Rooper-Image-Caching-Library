@@ -1,9 +1,9 @@
-package com.rohegde7.rooper
+package com.rohegde7.rooper.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.rohegde7.rooper.caching.CachingUtil
 import com.rohegde7.rooper.enum.Action
+import com.rohegde7.rooper.ui.ImageLoadingRepository
 
 class ImageLoadingViewModel : ViewModel(){
 

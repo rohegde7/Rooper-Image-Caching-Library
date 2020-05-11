@@ -1,4 +1,4 @@
-package com.rohegde7.rooper
+package com.rohegde7.rooper.ui
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider.NewInstanceFactory
+import com.rohegde7.rooper.R
 import com.rohegde7.rooper.caching.CachingUtil
 import com.rohegde7.rooper.databinding.ActivityImageLoadingBinding
 import com.rohegde7.rooper.enum.Action

@@ -29,9 +29,7 @@ object Rooper {
 
         UiUtil.displayProgress(context, "Downloading image...")
 
-        mImageDownloadApi = CustomRetrofitProvider
-            .getRetrofit(url)
-            .create(ImageDownloadApi::class.java)
+        mImageDownloadApi = getImageDownloadApi(url)
 
         mImageDownloadApi!!
             .downloadImage()
@@ -59,5 +57,11 @@ object Rooper {
 
     private fun showImageLoadedFromCacheToast(context: Context) {
         Toast.makeText(context, "Image loaded from Cache!", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun getImageDownloadApi(url: String): ImageDownloadApi {
+        return CustomRetrofitProvider
+            .getRetrofit(url)
+            .create(ImageDownloadApi::class.java)
     }
 }
