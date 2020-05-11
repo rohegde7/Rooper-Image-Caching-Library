@@ -39,6 +39,7 @@ class ImageLoadingActivity : AppCompatActivity() {
     private fun observeLiveData() {
         mViewModel.imageAction.observe(this, Observer {
             when (it) {
+                Action.DOWNLOAD_SAMPLE_IMAGE -> downloadSampleImage()
                 Action.DOWNLOAD_IMAGE -> downloadImage()
                 Action.CLEAR_CACHE -> clearCache()
                 Action.CLEAR_IMAGE -> image_view.setImageBitmap(null)
@@ -52,7 +53,11 @@ class ImageLoadingActivity : AppCompatActivity() {
     }
 
     private fun downloadImage() {
-        Rooper.downloadImage(this, "http://www.3ue.xyz/", image_view)
+        Rooper.downloadImage(this, mViewModel.imageUrl.get()!!, image_view)
+    }
+
+    private fun downloadSampleImage() {
+        Rooper.downloadImage(this, "http://www.3ue.xyz/img_api/pX9eRjli1ok.jpg", image_view)
     }
 
     override fun onDestroy() {

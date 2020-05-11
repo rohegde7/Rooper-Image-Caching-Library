@@ -11,7 +11,9 @@ object CachingUtil {
 
     fun getCachedImage(url: String): Bitmap? {
 
-        for (item in mCachedImages) if (item.key == url) return item.value
+        for (item in mCachedImages)
+            if (item.key == url)
+                return item.value
 
         return null
     }
