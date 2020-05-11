@@ -19,7 +19,7 @@ allprojects {
 ### Add the dependency
 ```
 dependencies {
-	        implementation 'com.github.rohegde7:Rooper-Image-Library:1.0.1'
+  implementation 'com.github.rohegde7:Rooper-Image-Library:1.0.1'
 }
 ```
 
