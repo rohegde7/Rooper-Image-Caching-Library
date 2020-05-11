@@ -9,7 +9,6 @@ class RooperApplication : Application() {
         super.onCreate()
 
         mAppContext = this
-        CachingUtil.initCaching()
     }
 
     override fun onLowMemory() {

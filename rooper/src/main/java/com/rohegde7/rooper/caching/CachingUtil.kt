@@ -2,12 +2,12 @@ package com.rohegde7.rooper.caching
 
 import android.graphics.Bitmap
 
-object CachingUtil {
+/*
+ * Static variable used to store the image URL along with the downloaded image
+ * */
+val mCachedImages = HashMap<String, Bitmap>()
 
-    /*
-    * Used to store the image URL along with the downloaded image
-    * */
-    private lateinit var mCachedImages: HashMap<String, Bitmap>
+object CachingUtil {
 
     fun getCachedImage(url: String): Bitmap? {
 
@@ -20,10 +20,6 @@ object CachingUtil {
 
     fun cacheImage(url: String, bitmap: Bitmap) {
         mCachedImages.put(url, bitmap)
-    }
-
-    fun initCaching() {
-        mCachedImages = HashMap()
     }
 
     fun clearCache() {
