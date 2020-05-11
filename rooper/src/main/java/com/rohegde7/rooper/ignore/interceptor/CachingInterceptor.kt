@@ -1,4 +1,4 @@
-package com.rohegde7.rooper.network.interceptor
+package com.rohegde7.rooper.ignore.interceptor
 
 import okhttp3.CacheControl
 import okhttp3.Interceptor

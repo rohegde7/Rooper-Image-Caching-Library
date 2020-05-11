@@ -1,4 +1,4 @@
-package com.rohegde7.rooper.network.interceptor
+package com.rohegde7.rooper.ignore.interceptor
 
 import android.util.Log
 import okhttp3.Interceptor

@@ -1,8 +1,7 @@
 package com.rohegde7.rooper.network
 
 import com.google.gson.GsonBuilder
-import com.rohegde7.rooper.network.interceptor.CachingInterceptor
-import com.rohegde7.rooper.network.interceptor.LoggerInterceptor
+import com.rohegde7.rooper.ignore.interceptor.LoggerInterceptor
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -26,7 +25,7 @@ object CustomRetrofitProvider {
 
     private fun getMyHttpClient(): OkHttpClient {
         val builder = OkHttpClient().newBuilder()
-            .addNetworkInterceptor(CachingInterceptor())
+//            .addNetworkInterceptor(CachingInterceptor())
 //            .addNetworkInterceptor(ForceCacheInterceptor())
             .addNetworkInterceptor(LoggerInterceptor())
         return builder.build()
